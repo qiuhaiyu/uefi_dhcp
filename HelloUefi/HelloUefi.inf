@@ -1,0 +1,28 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = HelloUefi
+  FILE_GUID                      = 7D87A4F1-9345-4A31-9E34-123456789ABC
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  HelloUefi.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootServicesTableLib
+  MemoryAllocationLib
+  BaseLib
+  BaseMemoryLib
+  
+[Protocols]
+  gEfiGraphicsOutputProtocolGuid
+  gEfiBlockIoProtocolGuid
+  
+[Guids]
+  gEfiPartTypeSystemPartGuid

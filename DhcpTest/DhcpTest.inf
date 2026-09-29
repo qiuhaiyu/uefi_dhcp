@@ -1,0 +1,24 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = DhcpTest
+  FILE_GUID                      = 7E58B53E-7834-4DA4-A84C-582A913B1001
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  DhcpTest.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootServicesTableLib
+  MemoryAllocationLib
+  BaseMemoryLib
+
+[Protocols]
+  gEfiDhcp4ServiceBindingProtocolGuid
+  gEfiDhcp4ProtocolGuid
